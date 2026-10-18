@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Про мене — Бугера Максим</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <header class="header">
+    <a class="logo" href="#hero">БМ</a>
+    <div class="header-end">
+      <div class="theme" role="group" aria-label="Колір фону">
+        <label class="theme-picker">
+          <span class="sr-only">Обрати колір фону</span>
+          <input id="bg-color" type="color" value="#0b0d12">
+        </label>
+        <div class="swatches">
+          <button type="button" data-bg="#0b0d12" style="background:#0b0d12" aria-label="Темний фон"></button>
+          <button type="button" data-bg="#1a2238" style="background:#1a2238" aria-label="Синій фон"></button>
+          <button type="button" data-bg="#1b2a22" style="background:#1b2a22" aria-label="Зелений фон"></button>
+          <button type="button" data-bg="#2a1d16" style="background:#2a1d16" aria-label="Коричневий фон"></button>
+          <button type="button" data-bg="#f3efe6" style="background:#f3efe6" aria-label="Світлий фон"></button>
+        </div>
+      </div>
+      <button class="nav-toggle" type="button" aria-label="Відкрити меню" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav" aria-label="Головна навігація">
+        <a href="#skills">Навички</a>
+        <a href="#goals">Цілі</a>
+        <a href="#contact">Контакти</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="hero">
+      <p class="eyebrow reveal">Привіт, я</p>
+      <h1 class="reveal">Бугера Максим</h1>
+      <p class="lead reveal">
+        Навчаюсь веброзробки та створюю прості, зрозумілі інтерфейси.
+        Ця сторінка — практика адаптивної верстки на HTML, CSS і JavaScript.
+      </p>
+      <div class="hero-actions reveal">
+        <a class="btn btn-primary" href="#contact">Зв’язатися</a>
+        <a class="btn btn-ghost" href="#skills">Мої навички</a>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <h2 class="reveal">Навички</h2>
+      <p class="section-intro reveal">Три напрями, на яких зараз зосереджуюсь.</p>
+      <div class="cards">
+        <article class="card reveal">
+          <span class="card-icon" aria-hidden="true">01</span>
+          <h3>HTML</h3>
+          <p>Семантична розмітка, доступність і структура сторінок, яку легко читати і підтримувати.</p>
+        </article>
+        <article class="card reveal">
+          <span class="card-icon" aria-hidden="true">02</span>
+          <h3>CSS</h3>
+          <p>Адаптивна сітка, темна тема, анімації та акуратний мінімалістичний вигляд на будь-якому екрані.</p>
+        </article>
+        <article class="card reveal">
+          <span class="card-icon" aria-hidden="true">03</span>
+          <h3>JavaScript</h3>
+          <p>Інтерактивність: меню, плавна прокрутка, поява блоків і проста перевірка форми.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="goals" class="section">
+      <h2 class="reveal">Мої цілі</h2>
+      <ul class="goals reveal">
+        <li>
+          <strong>Опанувати основи фронтенду</strong>
+          <span>Впевнено верстати адаптивні сторінки без шаблонів.</span>
+        </li>
+        <li>
+          <strong>Писати чистий код</strong>
+          <span>Розділяти HTML, стилі й логіку, щоб проєкт було легко змінювати.</span>
+        </li>
+        <li>
+          <strong>Зібрати портфоліо</strong>
+          <span>Показати кілька невеликих робіт і поступово ускладнювати завдання.</span>
+        </li>
+      </ul>
+    </section>
+
+    <section id="contact" class="section contact">
+      <h2 class="reveal">Контакти</h2>
+      <p class="section-intro reveal">
+        Це навчальний приклад. Email вигаданий і не приймає реальні листи.
+      </p>
+      <div class="contact-grid">
+        <aside class="contact-card reveal">
+          <p><span>Email</span> <a href="mailto:maxim.bugera.dev@example.com">maxim.bugera.dev@example.com</a></p>
+          <p><span>Місто</span> Київ</p>
+          <p><span>Статус</span> Відкритий до навчальних проєктів</p>
+        </aside>
+        <form class="form reveal" id="contact-form" novalidate>
+          <label>
+            Ім’я
+            <input type="text" name="name" autocomplete="name" required>
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" autocomplete="email" required>
+          </label>
+          <label>
+            Повідомлення
+            <textarea name="message" rows="4" required></textarea>
+          </label>
+          <button class="btn btn-primary" type="submit">Надіслати</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Бугера Максим · навчальна сторінка</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
